@@ -1,0 +1,13 @@
+stages:
+- deploy
+
+Deploy to Heroku:
+  stage: deploy
+  image: ruby:latest
+  only:
+  - main
+  script:
+  - gem install dpl
+  - cd challenge-chapter-7-backend
+  - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_API_KEY
+
