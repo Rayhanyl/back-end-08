@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "develop": "nodemon -q bin/www",
-    "build": "npx sequelize db:migrat && npx sequelize db:seed"
+    "build": "npx sequelize db:migrate && npx sequelize db:seed"
   },
   "dependencies": {
     "axios": "^0.27.2",
