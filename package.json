@@ -4,9 +4,9 @@
   "main": "app/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "bin/www",
+    "start": "node ./bin/www",
     "develop": "nodemon -q bin/www",
-    "build": "npx sequelize db:migrate"
+    "build": "npx sequelize db:migrat && npx sequelize db:seed"
   },
   "dependencies": {
     "axios": "^0.27.2",
